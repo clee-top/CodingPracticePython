@@ -2,7 +2,7 @@
 # I installed these for the app, the ones below came with python or maybe are dependencies.
 beautifulsoup4==4.6.3
 Flask==1.0.2
-requests==2.19.1
+requests==2.20.0
 
 appdirs==1.4.3
 asn1crypto==0.24.0
