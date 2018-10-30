@@ -1,0 +1,74 @@
+Below is the driver data I used expanded from the original set of three sample URLS
+
+"https://www.indeed.com/viewjob?jk=8cfd54301d909668", "https://www.indeed.com/viewjob?jk=b17c354e3cabe4f1",
+"https://www.indeed.com/viewjob?jk=38123d02e67210d9", "https://www.indeed.com/viewjob?jk=4e9c92bda236cabf",
+"https://www.indeed.com/viewjob?jk=520591f85daec693", "https://www.indeed.com/viewjob?jk=00e05d63138f195f",
+"https://www.indeed.com/viewjob?jk=d9af9a94f5efb757", "https://www.indeed.com/viewjob?jk=91e7ee9458e10ba1",
+"https://www.indeed.com/viewjob?jk=d599ab7f89c83212", "https://www.indeed.com/viewjob?jk=cb654fc18c2ec1d8"
+
+Sample payload:
+
+It's the 10 url's above copied 10 times to test the time of processing 100 urls since that was one of the requirements
+for the project. I used postman (https://www.getpostman.com/), a little testing app for these sorts of things to post
+these to the running flask app, but you could just as easily use any tool or cUrl or something.
+
+Header:
+Content-Type:application/json
+
+Body:
+
+{
+ "urls": [
+	"https://www.indeed.com/viewjob?jk=8cfd54301d909668", "https://www.indeed.com/viewjob?jk=b17c354e3cabe4f1",
+	"https://www.indeed.com/viewjob?jk=38123d02e67210d9", "https://www.indeed.com/viewjob?jk=4e9c92bda236cabf",
+	"https://www.indeed.com/viewjob?jk=520591f85daec693", "https://www.indeed.com/viewjob?jk=00e05d63138f195f",
+	"https://www.indeed.com/viewjob?jk=d9af9a94f5efb757", "https://www.indeed.com/viewjob?jk=91e7ee9458e10ba1",
+	"https://www.indeed.com/viewjob?jk=d599ab7f89c83212", "https://www.indeed.com/viewjob?jk=cb654fc18c2ec1d8",
+
+	"https://www.indeed.com/viewjob?jk=8cfd54301d909668", "https://www.indeed.com/viewjob?jk=b17c354e3cabe4f1",
+	"https://www.indeed.com/viewjob?jk=38123d02e67210d9", "https://www.indeed.com/viewjob?jk=4e9c92bda236cabf",
+	"https://www.indeed.com/viewjob?jk=520591f85daec693", "https://www.indeed.com/viewjob?jk=00e05d63138f195f",
+	"https://www.indeed.com/viewjob?jk=d9af9a94f5efb757", "https://www.indeed.com/viewjob?jk=91e7ee9458e10ba1",
+	"https://www.indeed.com/viewjob?jk=d599ab7f89c83212", "https://www.indeed.com/viewjob?jk=cb654fc18c2ec1d8",
+	"https://www.indeed.com/viewjob?jk=8cfd54301d909668", "https://www.indeed.com/viewjob?jk=b17c354e3cabe4f1",
+	"https://www.indeed.com/viewjob?jk=38123d02e67210d9", "https://www.indeed.com/viewjob?jk=4e9c92bda236cabf",
+	"https://www.indeed.com/viewjob?jk=520591f85daec693", "https://www.indeed.com/viewjob?jk=00e05d63138f195f",
+	"https://www.indeed.com/viewjob?jk=d9af9a94f5efb757", "https://www.indeed.com/viewjob?jk=91e7ee9458e10ba1",
+	"https://www.indeed.com/viewjob?jk=d599ab7f89c83212", "https://www.indeed.com/viewjob?jk=cb654fc18c2ec1d8",
+	"https://www.indeed.com/viewjob?jk=8cfd54301d909668", "https://www.indeed.com/viewjob?jk=b17c354e3cabe4f1",
+	"https://www.indeed.com/viewjob?jk=38123d02e67210d9", "https://www.indeed.com/viewjob?jk=4e9c92bda236cabf",
+	"https://www.indeed.com/viewjob?jk=520591f85daec693", "https://www.indeed.com/viewjob?jk=00e05d63138f195f",
+	"https://www.indeed.com/viewjob?jk=d9af9a94f5efb757", "https://www.indeed.com/viewjob?jk=91e7ee9458e10ba1",
+	"https://www.indeed.com/viewjob?jk=d599ab7f89c83212", "https://www.indeed.com/viewjob?jk=cb654fc18c2ec1d8",
+	"https://www.indeed.com/viewjob?jk=8cfd54301d909668", "https://www.indeed.com/viewjob?jk=b17c354e3cabe4f1",
+	"https://www.indeed.com/viewjob?jk=38123d02e67210d9", "https://www.indeed.com/viewjob?jk=4e9c92bda236cabf",
+	"https://www.indeed.com/viewjob?jk=520591f85daec693", "https://www.indeed.com/viewjob?jk=00e05d63138f195f",
+	"https://www.indeed.com/viewjob?jk=d9af9a94f5efb757", "https://www.indeed.com/viewjob?jk=91e7ee9458e10ba1",
+	"https://www.indeed.com/viewjob?jk=d599ab7f89c83212", "https://www.indeed.com/viewjob?jk=cb654fc18c2ec1d8",
+	"https://www.indeed.com/viewjob?jk=8cfd54301d909668", "https://www.indeed.com/viewjob?jk=b17c354e3cabe4f1",
+	"https://www.indeed.com/viewjob?jk=38123d02e67210d9", "https://www.indeed.com/viewjob?jk=4e9c92bda236cabf",
+	"https://www.indeed.com/viewjob?jk=520591f85daec693", "https://www.indeed.com/viewjob?jk=00e05d63138f195f",
+	"https://www.indeed.com/viewjob?jk=d9af9a94f5efb757", "https://www.indeed.com/viewjob?jk=91e7ee9458e10ba1",
+	"https://www.indeed.com/viewjob?jk=d599ab7f89c83212", "https://www.indeed.com/viewjob?jk=cb654fc18c2ec1d8",
+	"https://www.indeed.com/viewjob?jk=8cfd54301d909668", "https://www.indeed.com/viewjob?jk=b17c354e3cabe4f1",
+	"https://www.indeed.com/viewjob?jk=38123d02e67210d9", "https://www.indeed.com/viewjob?jk=4e9c92bda236cabf",
+	"https://www.indeed.com/viewjob?jk=520591f85daec693", "https://www.indeed.com/viewjob?jk=00e05d63138f195f",
+	"https://www.indeed.com/viewjob?jk=d9af9a94f5efb757", "https://www.indeed.com/viewjob?jk=91e7ee9458e10ba1",
+	"https://www.indeed.com/viewjob?jk=d599ab7f89c83212", "https://www.indeed.com/viewjob?jk=cb654fc18c2ec1d8",
+	"https://www.indeed.com/viewjob?jk=8cfd54301d909668", "https://www.indeed.com/viewjob?jk=b17c354e3cabe4f1",
+	"https://www.indeed.com/viewjob?jk=38123d02e67210d9", "https://www.indeed.com/viewjob?jk=4e9c92bda236cabf",
+	"https://www.indeed.com/viewjob?jk=520591f85daec693", "https://www.indeed.com/viewjob?jk=00e05d63138f195f",
+	"https://www.indeed.com/viewjob?jk=d9af9a94f5efb757", "https://www.indeed.com/viewjob?jk=91e7ee9458e10ba1",
+	"https://www.indeed.com/viewjob?jk=d599ab7f89c83212", "https://www.indeed.com/viewjob?jk=cb654fc18c2ec1d8",
+	"https://www.indeed.com/viewjob?jk=8cfd54301d909668", "https://www.indeed.com/viewjob?jk=b17c354e3cabe4f1",
+	"https://www.indeed.com/viewjob?jk=38123d02e67210d9", "https://www.indeed.com/viewjob?jk=4e9c92bda236cabf",
+	"https://www.indeed.com/viewjob?jk=520591f85daec693", "https://www.indeed.com/viewjob?jk=00e05d63138f195f",
+	"https://www.indeed.com/viewjob?jk=d9af9a94f5efb757", "https://www.indeed.com/viewjob?jk=91e7ee9458e10ba1",
+	"https://www.indeed.com/viewjob?jk=d599ab7f89c83212", "https://www.indeed.com/viewjob?jk=cb654fc18c2ec1d8",
+	"https://www.indeed.com/viewjob?jk=8cfd54301d909668", "https://www.indeed.com/viewjob?jk=b17c354e3cabe4f1",
+	"https://www.indeed.com/viewjob?jk=38123d02e67210d9", "https://www.indeed.com/viewjob?jk=4e9c92bda236cabf",
+	"https://www.indeed.com/viewjob?jk=520591f85daec693", "https://www.indeed.com/viewjob?jk=00e05d63138f195f",
+	"https://www.indeed.com/viewjob?jk=d9af9a94f5efb757", "https://www.indeed.com/viewjob?jk=91e7ee9458e10ba1",
+	"https://www.indeed.com/viewjob?jk=d599ab7f89c83212", "https://www.indeed.com/viewjob?jk=cb654fc18c2ec1d8"
+ ]
+}
