@@ -59,3 +59,4 @@ docker run -d -p 5000:5000 indeed-scraper:latest
 I can get it to run on Windows but it fails due to file system differences. I can get it to work with a Windows docker
 image but from what I saw from the office the people I'm submitting this to are using Mac Os and the manual or Docker
 image instructions should both work.
+

@@ -23,9 +23,9 @@ app = Flask(__name__)
 # most common machines this server would run on. It also chugs through 100 urls in ~ 3 seconds on my machine with
 # these settings.
 
+
 @app.route('/scrapeIndeed', methods=['POST'])
 def scrape_indeed():
-
     if not request.is_json:
         print("Incoming request not legally formatted Json, please try with legal Json.")
         return 'Bad_Request'
@@ -59,7 +59,7 @@ def scrape_indeed():
     final_response = json.loads(json_intermediary)
 
     # Print out the responses nicely for people.
-    print(json.dumps(final_response, sort_keys=True,indent=4, separators=(',', ': ')))
+    print(json.dumps(final_response, sort_keys=True, indent=4, separators=(',', ': ')))
 
     return 'HTTP 200 Success'
 

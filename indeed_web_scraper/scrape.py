@@ -1,9 +1,11 @@
 from bs4 import BeautifulSoup
 import requests
 
+
 # Uncomment these if you use the test driver to test the code without the server.
 # import json
 # from multiprocessing import Pool
+
 
 # This function takes one url and processes it in the manner we wish which is scraping indeed.com job listing web
 # pages. It takes in a list of a url parsed from incoming requests. It returns json as described in requirements
@@ -11,14 +13,14 @@ import requests
 
 
 def process_url(url):
-
     # Test urls. Call the function with these to test.
     # mulesoft url: 'https://www.indeed.com/viewjob?jk=8cfd54301d909668'
     # healthify url: 'https://www.indeed.com/viewjob?jk=b17c354e3cabe4f1'
     # intechriti url: 'https://www.indeed.com/viewjob?jk=38123d02e67210d9'
 
     # Fake header so site doesn't complain as much. Sometimes they complain when you crawl without one.
-    headers = {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36'}
+    headers = {
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36'}
 
     # Requests API lets you setup retrying if you get bad responses.
     # From here: http://docs.python-requests.org/en/latest/api/
@@ -46,12 +48,11 @@ def process_url(url):
 
     # Construct current url response into a dictionary to turn into json.
     response_dict = ({'title': job_title, 'location': job_location,
-                     'company': company.getText(), 'url': url})
+                      'company': company.getText(), 'url': url})
 
     # print("The current list of job dicts looks like this: " + str(response_list))
 
     return response_dict
-
 
 # Test function so I don't have to test with the flask app and posting Json to my server.
 # def test_driver():
