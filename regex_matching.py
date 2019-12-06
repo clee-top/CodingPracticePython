@@ -48,16 +48,15 @@ secondCase = regex_matching("offices/877/meetings/876/people/laura", "offices/87
 print("This first case should return true: " + str(firstCase))
 print("This second case should return true: " + str(secondCase))
 
-
 # Checks:
 # 1. Exactly equal is fine. 2. Plus is fine, but not if it's the last entry. 3. # is fine, but only once and as the
 # last entry.
 
-
 # Below is the definition given by prospective employer(Cruise) Above is solution worked out.
 #
 #
-# # MQTT is a simple messaging protocol where producers publish data to a topic and subscribers receive that data if they listen to a matching topic pattern.
+# # MQTT is a simple messaging protocol where producers publish data to a topic and
+# subscribers receive that data if they listen to a matching topic pattern.
 #
 # #●  topics are simple path strings:
 # #  ○  offices/435/meetings/876/people/laura
