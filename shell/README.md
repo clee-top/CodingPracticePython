@@ -1,0 +1,2 @@
+This folder contains all the challenges on various sites for solving stuff with shell commands. Putting them in self
+contained folders with example input and instructions.

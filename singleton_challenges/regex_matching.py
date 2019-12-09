@@ -1,4 +1,5 @@
-# This function takes a topic described below in the problem set and a topic pattern. It will return true
+
+12412122222# This function takes a topic described below in the problem set and a topic pattern. It will return true
 # if it matches the topic pattern. False if not.
 
 
@@ -44,7 +45,6 @@ def regex_matching(topic, topicPattern):
 # Test cases, both from description.
 firstCase = regex_matching("offices/435/meetings/876/people/laura", "offices/+/meetings/+/people/laura")
 secondCase = regex_matching("offices/877/meetings/876/people/laura", "offices/877/meetings/#")
-
 print("This first case should return true: " + str(firstCase))
 print("This second case should return true: " + str(secondCase))
 
