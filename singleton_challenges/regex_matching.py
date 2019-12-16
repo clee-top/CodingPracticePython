@@ -1,12 +1,10 @@
-
-12412122222# This function takes a topic described below in the problem set and a topic pattern. It will return true
+# This function takes a topic described below in the problem set and a topic pattern. It will return true
 # if it matches the topic pattern. False if not.
 
 
-def regex_matching(topic, topicPattern):
-
+def regex_matching(topic, topic_pattern):
     topic_tokenized = topic.split("/")
-    pattern_tokenized = topicPattern.split("/")
+    pattern_tokenized = topic_pattern.split("/")
 
     # Get the length of the pattern, because we need to know if we're ever at the end of the pattern string.
     pattern_length = len(pattern_tokenized)

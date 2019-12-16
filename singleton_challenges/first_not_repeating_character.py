@@ -1,7 +1,7 @@
 def first_not_repeating_character(s):
 
     # Strategy go through every character and add them to a dictionary. Key is char and value is the index.
-    # If you encounter it again, remove from dictionary and add it to a "ignore" set to skip further occurences.
+    # If you encounter it again, remove from dictionary and add it to a "ignore" set to skip further occurrences.
     # Once done, sort the dictionary by index and print the min, or if empty return "_"
     #
     # You could probably remove the set and just put the index at -1 or something and skip that to save a bit of space.
