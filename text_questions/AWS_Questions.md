@@ -1,4 +1,4 @@
-Info: Notes and psuedocode pertaining to a tech screen
+Info: Notes and psuedocode pertaining to a tech screen. This was from Aktana
 
 A: -> What I wrote at the time. Was presented over coderpad.
 N: -> Notes after the fact. So I can remember what I wrote/answered at the time.

@@ -17,6 +17,7 @@ def addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:
 
     second_num = ""
     second_pointer = l2
+
     while second_pointer is not None:
         # Get the next number, make it a string so when added you properly construct the number.
         second_num += str(second_pointer.val)

@@ -26,6 +26,7 @@ def lengthOfLongestSubstring(s: str) -> int:
         else:
             # If this character is present in hash then this character has previous occurrence, check if that occurrence is before or after starting point of current substring.
             if last_seen_map[s[index]] >= current_sub_index:
+
                 # Find length of current substring and update maxlen and start accordingly.
                 current_sub_length = index - current_sub_index
 
