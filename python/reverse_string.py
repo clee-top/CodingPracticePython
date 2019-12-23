@@ -1,4 +1,5 @@
-# Reverse a string without slicing.
+# Reverse a string without slicing. This is asked. ALOT by everyone. This solution doesn't use reverse or slicing so people don't call it cheating.
+
 def reverse_string(input_string):
     new_string = ""
 
@@ -9,6 +10,5 @@ def reverse_string(input_string):
         print(input_string[index])
 
     return new_string
-
 
 reverse_string("Meow")

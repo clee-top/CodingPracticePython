@@ -1,5 +1,28 @@
+# From leetcode
+
+# Given a string, find the length of the longest substring without repeating characters.
+#
+# Example 1:
+#
+# Input: "abcabcbb"
+# Output: 3
+# Explanation: The answer is "abc", with the length of 3.
+# Example 2:
+#
+# Input: "bbbbb"
+# Output: 1
+# Explanation: The answer is "b", with the length of 1.
+# Example 3:
+#
+# Input: "pwwkew"
+# Output: 3
+# Explanation: The answer is "wke", with the length of 3.
+# Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+
+
 def lengthOfLongestSubstring(s: str) -> int:
-    # Solution from here, since mine was slow as shit. https://www.geeksforgeeks.org/print-longest-substring-without-repeating-characters/
+
+    # Get the length
     input_length = len(s)
 
     # Starting point of current substring.
@@ -14,9 +37,10 @@ def lengthOfLongestSubstring(s: str) -> int:
     # Hash Map to store last occurrence of each already visited character.
     last_seen_map = {}
 
-    # Last occurrence of first character is index 0
+    # Pre-populate: The "first" last occurrence of first character is index 0
     last_seen_map[s[0]] = 0
 
+    # Loop through the string.
     for index in range(1, input_length):
 
         # If this character is not present in hash, then this is first occurrence of this character, store this in hash.
@@ -27,7 +51,7 @@ def lengthOfLongestSubstring(s: str) -> int:
             # If this character is present in hash then this character has previous occurrence, check if that occurrence is before or after starting point of current substring.
             if last_seen_map[s[index]] >= current_sub_index:
 
-                # Find length of current substring and update maxlen and start accordingly.
+                # Find length of current substring and update substring max length and start accordingly.
                 current_sub_length = index - current_sub_index
 
                 if longest_substring < current_sub_length:
@@ -53,23 +77,3 @@ def lengthOfLongestSubstring(s: str) -> int:
 lengthOfLongestSubstring("abcabcbb")
 lengthOfLongestSubstring("bbbbb")
 
-# From leetcode
-
-# Given a string, find the length of the longest substring without repeating characters.
-#
-# Example 1:
-#
-# Input: "abcabcbb"
-# Output: 3
-# Explanation: The answer is "abc", with the length of 3.
-# Example 2:
-#
-# Input: "bbbbb"
-# Output: 1
-# Explanation: The answer is "b", with the length of 1.
-# Example 3:
-#
-# Input: "pwwkew"
-# Output: 3
-# Explanation: The answer is "wke", with the length of 3.
-# Note that the answer must be a substring, "pwke" is a subsequence and not a substring.

@@ -1,5 +1,6 @@
-Info: Notes and psuedocode pertaining to a tech screen. This was from Aktana
 
+Info: Notes and psuedocode pertaining to a tech screen. This was from Aktana
+Legend:
 A: -> What I wrote at the time. Was presented over coderpad.
 N: -> Notes after the fact. So I can remember what I wrote/answered at the time.
 
@@ -13,11 +14,10 @@ A: aws ec2 run-instances --image-id ami-xxxxxxxx (Probably an amazon image) --co
 
 3. Login to the instance via ssh
 A: ssh ec2-user@something.something (User varies by image)
-N: Didn't need AWS cli for this, mild trick question?
+N: Didn't need AWS cli for this, mild trick question since the instructions said use all aws cli commands?
 
 4. Download a folder from some S3 bucket
 A: aws s3 cp myfolder s3://mybucket/folder --recursive
-N: I think I got the order wrong, shoulda been aws s3 cp s3://mybucket/folder/ myfolder/ --recursive
 
 5. In said folder there is some python code (flask app), write a Dockerfile that will create an image that will that said flask app.
 A:
@@ -29,7 +29,6 @@ entrypoint['python', 'run_app']
 ```
 N: Forgot to capitalize command "USER" and ENTRYPOINT. Made up what the entrypoint should be. Add assumes flask code is local to the Dockerfile when built.
 
-
 6. Run the container and make sures it stays running.
 A:
 ```
@@ -38,6 +37,3 @@ docker push URL/.../.../some_flask_app:version (Or whatever repo you want.)
 docker run -it some_flask_app:version
 docker exec <some_pid> bin/bash
 ```
-
-
-

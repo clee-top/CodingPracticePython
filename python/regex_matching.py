@@ -1,6 +1,21 @@
+# Below is the definition given by prospective employer(Cruise) during a coderpad. Solution worked.
+
+# Checks:
+# 1. Exactly equal is fine. 2. Plus is fine, but not if it's the last entry. 3. # is fine, but only once and as the last entry.
+# MQTT is a simple messaging protocol where producers publish data to a topic and subscribers receive that data if they listen to a matching topic pattern.
+#●  topics are simple path strings:
+#  ○  offices/435/meetings/876/people/laura
+#●  topic patterns are path strings which can contain two wildcards + (any value) and # (any rest of path)
+#   ○  A subscriber for Laura’s events in any office or meeting:
+#   offices/+/meetings/+/people/laura
+#   ○  A subscriber for all office 877 meeting data:
+#   offices/877/meetings/#
+#   ○  Note + may appear multiple times, but # only once and must be last\
+# Given a topic and topic pattern write a function returning true if they match and false if not.
+
+
 # This function takes a topic described below in the problem set and a topic pattern. It will return true
 # if it matches the topic pattern. False if not.
-
 
 def regex_matching(topic, topic_pattern):
     topic_tokenized = topic.split("/")
@@ -46,23 +61,3 @@ secondCase = regex_matching("offices/877/meetings/876/people/laura", "offices/87
 print("This first case should return true: " + str(firstCase))
 print("This second case should return true: " + str(secondCase))
 
-# Checks:
-# 1. Exactly equal is fine. 2. Plus is fine, but not if it's the last entry. 3. # is fine, but only once and as the
-# last entry.
-
-# Below is the definition given by prospective employer(Cruise) Above is solution worked out.
-#
-#
-# # MQTT is a simple messaging protocol where producers publish data to a topic and
-# subscribers receive that data if they listen to a matching topic pattern.
-#
-# #●  topics are simple path strings:
-# #  ○  offices/435/meetings/876/people/laura
-# #●  topic patterns are path strings which can contain two wildcards + (any value) and # (any rest of path)
-# #   ○  A subscriber for Laura’s events in any office or meeting:
-# #   offices/+/meetings/+/people/laura
-# #   ○  A subscriber for all office 877 meeting data:
-# #   offices/877/meetings/#
-# #   ○  Note + may appear multiple times, but # only once and must be last
-#
-# Given a topic and topic pattern write a function returning true if they match and false if not.

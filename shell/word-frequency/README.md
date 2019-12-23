@@ -1,5 +1,4 @@
 From: https://leetcode.com/problems/word-frequency/
-(Parentheses are personal notes)
 
 192. Word Frequency
 
@@ -22,27 +21,27 @@ the 4
 is 3
 sunny 2
 day 1
+
 Note:
 Don't worry about handling ties, it is guaranteed that each word's frequency count is unique.
 Could you write it in one-line using Unix pipes? (Yes, it was setup this way above.)
 
 Solution:
-$ cat words.txt | tr ' ' '\n' | sed '/^[[:space:]]*$/d' | sort | uniq -c | sed 's/^[ \t]*//;s/[ \t]*$//' | sort -n -r | awk '{print $2,$1}'
+cat words.txt | tr ' ' '\n' | sed '/^[[:space:]]*$/d' | sort | uniq -c | sed 's/^[ \t]*//;s/[ \t]*$//' | sort -n -r | awk '{print $2,$1}'
 
 Explanation (By command) -> 
 cat (Concatenate) gets the text from file and is now in your output stream. 
 
 tr (translate) which is used to replace whitespace characters with newlines. This makes it so every word is on it's own line alone.
 
-sed (stream editor), got this from google which strips blank lines. Google it if you really care about why.
+sed (stream editor), got the filter from Google which strips blank lines. 
 
 sort, now the input is easy to sort which by default puts it in alphabetical order grouped with all of its duplicates.
 
-uniq, strips away duplicates. It also gives you the count of each word with the "-c" flag which is the crux.
+uniq, strips away duplicates. It also gives you the count of each word with the "-c" flag which is the crux of what the problem wants.
 
-sed(stream editor), this version is meant to strip whitespace, Google it for the syntax/meaning.
+sed(stream editor), again to strip whitespace for the next command.
 
 sort, we want to sort the remaining input by number in reverse order to get the output the way the problem wants.
 
-awk, last command is a simple awk program you Googled that literally just gets input on every line and switches them the 
-first and second field which effectively reverses the columns to get what we want.
+awk, simple awk program that just gets two input on every line and switches the the first and second field which effectively reverses the order to get the order what we want.

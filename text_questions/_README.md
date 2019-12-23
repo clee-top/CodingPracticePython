@@ -1,0 +1,1 @@
+This folder contains quiz-like questionares that are becoming more common. Going to have to put Triplebyte in here later.

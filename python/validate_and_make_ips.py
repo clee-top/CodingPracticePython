@@ -1,10 +1,11 @@
-# Aktana and Flexport asked this question
+# Aktana and Flexport both asked these exact questions. Wonder where they got it. Below is given prompt
+# Looked later, this is another a geeks for geeks problem (Sigh) https://www.geeksforgeeks.org/program-generate-possible-valid-ip-addresses-given-string/
+
 # IPv4 Address Validator
 #
 # 127.0.0.1 -> true
 #
 # 256.256.256.256 -> false
-
 
 # This function takes an input and returns True if it is a valid. IPv4 Address, False if not.
 def validate_ip(number_to_check):
@@ -44,11 +45,10 @@ def validate_ip(number_to_check):
 # validate_ip("127.0.0.a")
 # validate_ip("0127.0.0.1")
 
-
 # IPv4 Address Maker
 # Given a well formatted string, attempt to determine if you can make it a valid IP address by adding
 # three dots in places that would make it a valid IP address.
-# N -> This is another a geeks for geeks problem (Sigh) https://www.geeksforgeeks.org/program-generate-possible-valid-ip-addresses-given-string/
+
 def ip_maker(input_number):
 
     input_length = len(input_number)

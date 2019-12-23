@@ -18,7 +18,7 @@ RUN apt-get update -y && \
 RUN pip install --upgrade pip
 
 # Copy the requirements.txt first to leverage Docker cache. Then the two python files we need.
-COPY ./requirements.txt /app/requirements.txt
+COPY requirements.txt /app/requirements.txt
 
 # Usually good practice not to use root as workdir.
 WORKDIR /app

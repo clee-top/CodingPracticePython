@@ -1,7 +1,5 @@
-# Legend:
-# N -> Notes I put in later.
+# Below is description given by proctor:
 
-# Below is description given by proctor
 # Please write a function reverse_array() that returns the provided array in reverse order.
 #   NOTE: Do not use built-in array reversal functions
 # Example:

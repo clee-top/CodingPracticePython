@@ -1,3 +1,24 @@
+# N-> This was from Glassdoor. Was a tech screen.
+
+# Given input of host names of the pattern:
+# ENV-DEPLOYMENT_ID-APP_NAME-INDEX.DOMAIN
+# Report a tab separated table of
+# ENV<TAB>APP_NAME<TAB>DEPLOYMENT_ID<TAB>COUNT_OF_HOSTS
+#
+# COUNT_OF_HOSTS is the number of hostnames of the same ENV, APP_NAME, and DEPLOYMENT_ID
+#
+# input = '''
+# Prod-20160502-app-02.glassdoor.local
+# Qa-20181001-app-02.glassdoor.local
+# Qa-20181001-app-04.glassdoor.local
+# Qa-20181002-myapp-01.glassdoor.local
+# '''
+#
+# Expected Output
+# Prod   app     20160502       1
+# Qa     app     20181001       2
+# Qa     myapp   20181002       1
+
 import re
 
 # This function takes some raw input files and outputs both a more formatted string as well
@@ -32,26 +53,3 @@ Qa-20181001-app-04.glassdoor.local
 Qa-20181002-myapp-01.glassdoor.local'''
 
 parse_log_file(example_log)
-
-# 
-# Your previous Python 2 content is preserved below:
-# 
-# # Given input of host names of the pattern:
-# # ENV-DEPLOYMENT_ID-APP_NAME-INDEX.DOMAIN
-# # Report a tab separated table of
-# # ENV<TAB>APP_NAME<TAB>DEPLOYMENT_ID<TAB>COUNT_OF_HOSTS
-# #
-# # COUNT_OF_HOSTS is the number of hostnames of the same ENV, APP_NAME, and DEPLOYMENT_ID
-# 
-# input = '''
-# Prod-20160502-app-02.glassdoor.local
-# Qa-20181001-app-02.glassdoor.local
-# Qa-20181001-app-04.glassdoor.local
-# Qa-20181002-myapp-01.glassdoor.local
-# '''
-# 
-# # Expected Output
-# # Prod   app     20160502       1
-# # Qa     app     20181001       2
-# # Qa     myapp   20181002       1
-# 
