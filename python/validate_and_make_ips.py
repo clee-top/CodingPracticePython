@@ -7,9 +7,9 @@
 #
 # 256.256.256.256 -> false
 
+
 # This function takes an input and returns True if it is a valid. IPv4 Address, False if not.
 def validate_ip(number_to_check):
-
     # Split on the dots since IPv4 addresses have a required format we can which easily this way.
     numbers_split = number_to_check.split(".")
 
@@ -38,6 +38,7 @@ def validate_ip(number_to_check):
     # print("Found a valid ip at: " + str(number_to_check))
     return True
 
+
 # Test cases, correct and edge cases.
 # validate_ip("256.256.256.256")
 # validate_ip("127.0.0.1")
@@ -49,8 +50,8 @@ def validate_ip(number_to_check):
 # Given a well formatted string, attempt to determine if you can make it a valid IP address by adding
 # three dots in places that would make it a valid IP address.
 
-def ip_maker(input_number):
 
+def ip_maker(input_number):
     input_length = len(input_number)
 
     # Check string isn't too long. IPV4 can'th ave more then 12 numbers.
@@ -82,6 +83,7 @@ def ip_maker(input_number):
 
     print("Return list of valid IP's looks like this: " + str(return_list))
     return return_list
+
 
 # ip_maker("00001")
 ip_maker("25525511135")

@@ -1,5 +1,6 @@
 # From here: https://app.codesignal.com/interview-practice/task/uX5iLwhc6L5ckSyNC
 # Apparently a question Amazon asks.
+
 # Note: Write a solution that only iterates over the string once and uses O(1) additional memory,
 # since this is what you would be asked to do during a real interview.
 #
@@ -68,7 +69,7 @@ def first_not_repeating_character(s):
 
 
 firstTestCase = first_not_repeating_character("abacabad")
-print ("The first test case tests \"abacabad\" and expected output is: 'c' -> " + firstTestCase)
+print("The first test case tests \"abacabad\" and expected output is: 'c' -> " + firstTestCase)
 
 secondTestCase = first_not_repeating_character("abacabaabacaba")
-print ("The first test case tests \"abacabaabacaba\" and expected output is: '_' -> " + secondTestCase)
+print("The first test case tests \"abacabaabacaba\" and expected output is: '_' -> " + secondTestCase)

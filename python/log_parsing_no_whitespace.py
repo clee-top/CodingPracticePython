@@ -33,7 +33,7 @@ def parse_log_file(input_string):
         # Split the entry into components we care about.
         new_entry = re.split(r'[-.]', line)
 
-        #print(new_entry[0])
+        print(new_entry[0])
 
         # If the entry already exists, just increment the value, keep the original text as the key.
         if str(new_entry[0]+new_entry[1]+new_entry[2]) in counts_dict:

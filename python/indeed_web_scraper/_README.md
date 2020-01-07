@@ -1,3 +1,4 @@
+### This project was a take home exam given by jobr, a mobile job application site that was acquired by Monster.com. Solution works and got interview/offer.
 
 This repository contains a Flask application running on Python 3.7 that when run serves one endpoint (/scrapeIndeed).
 It expects to have json passed to it in a POST. See "driver_data.txt" for examples of this data as well as how to use

@@ -1,5 +1,6 @@
 # Below is the definition given by prospective employer(Cruise) during a coderpad. Solution worked.
-
+# References:
+# https://docs.python.org/2/library/re.html
 # Checks:
 # 1. Exactly equal is fine. 2. Plus is fine, but not if it's the last entry. 3. # is fine, but only once and as the last entry.
 # MQTT is a simple messaging protocol where producers publish data to a topic and subscribers receive that data if they listen to a matching topic pattern.
