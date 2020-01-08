@@ -1,5 +1,6 @@
 # Parse this sort of log file into a csv looking format.
 # N -> Didn't have time to sort it, but otherwise correct. Coulda shoved the ID as the dictionary entry, sorted, re-added to string.
+# This was a question from Brex
 
 # N -> Splits and respects substrings by default, savage. https://docs.python.org/3/library/shlex.html
 # N -> https://stackoverflow.com/questions/79968/split-a-string-by-spaces-preserving-quoted-substrings-in-python
