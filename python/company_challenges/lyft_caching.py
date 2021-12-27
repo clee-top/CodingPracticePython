@@ -1,7 +1,6 @@
 # This was level 5/Lyft problem.
 # Original problem description below.
 
-
 # INT
 # get(key)
 # set(key, val)
@@ -13,19 +12,16 @@
 # c.set(3, 3) // evict 1
 # c.get(2) // -1
 
-
 # N -> My solution
 # This class implements a Hash-Map that keeps track of its size. Every entry will also have a usage metric so that
-# when a user tries to put something into the map above the current size it will eject the least used entry to make
-# room.
+# when a user tries to put something into the map above the current size it will eject the least used entry to make room.
 
 # Possible optimization to evicting. Have a hashmap whose key is the usage and points to the rest of the elements.
 # Then when you evict you simply choose first one in the lowest tier.
 
 # N -> They told me this problem is some mini-piece of a program they wrote for caching jobs in a CI environment. Cool.
 class usage_map:
-    # Keep a global least used entry so when you set over the cache limit you can immediately eject
-    # the first entry with that total.
+    # Keep a global least used entry so when you set over the cache limit you can immediately eject the first entry with that total.
     least_used = None
 
     # Constructor, user passes the size they want for the object to contain.
@@ -37,14 +33,17 @@ class usage_map:
     # If you do, use evict logic, if not add it and increment size.
     def set(self, key, value):
 
+        # Debug code
         # print("I'm currently trying to set the following key and value: " + str(key) + " " + str(value))
 
         # If your length is equal to your internal size you need to evict the least used entry.
         if len(self.internal_dict) == self.size:
-            least_used = 999999
+            # Post- interview edit: Lazily just using a big number here. A more real answer would use the system dependent max integer as the start
+            # https://stackoverflow.com/questions/6918291/how-to-determine-word-size-in-python/6918334#6918334
+            least_used = 9999999
             least_used_index = None
             for element in self.internal_dict:
-                # If you find an entry used less then current record, update.
+                # If you find an entry used less than current record, update.
                 if self.internal_dict[element][1] < least_used:
                     least_used = self.internal_dict[element][1]
                     least_used_index = element

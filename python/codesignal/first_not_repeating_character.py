@@ -37,7 +37,7 @@
 def first_not_repeating_character(s):
 
     # Strategy go through every character and add them to a dictionary. Key is char and value is the index.
-    # If you encounter it again, remove from dictionary and add it to a "ignore" set to skip further occurrences.
+    # If you encounter it again, remove from dictionary and add it to an "ignore" set to skip further occurrences.
     # Once done, sort the dictionary by index and print the min, or if empty return "_"
     #
     # You could remove the set and just put the index at -1 or something and skip that to save a bit of space.
@@ -47,7 +47,7 @@ def first_not_repeating_character(s):
 
     for string_counter in range(len(s)):
 
-        # Check to see if we need to ignore the char cause it already had a repeat.
+        # Check to see if we need to ignore the char because it already had a repeat.
         if s[string_counter] not in ignore_set:
 
             # Check to see if it is a repeat, if so gotta remove it from search space and add to ignore set.

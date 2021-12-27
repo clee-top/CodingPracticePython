@@ -1,8 +1,10 @@
 # Below is the definition given by prospective employer(Cruise) during a coderpad. Solution worked.
+
 # References:
 # https://docs.python.org/2/library/re.html
 # Checks:
-# 1. Exactly equal is fine. 2. Plus is fine, but not if it's the last entry. 3. # is fine, but only once and as the last entry.
+# 1. Exactly equal is fine. 2. Plus is fine, but not if it's the last entry. 3.
+# is fine, but only once and as the last entry.
 # MQTT is a simple messaging protocol where producers publish data to a topic and subscribers receive that data if they listen to a matching topic pattern.
 #●  topics are simple path strings:
 #  ○  offices/435/meetings/876/people/laura
@@ -11,7 +13,7 @@
 #   offices/+/meetings/+/people/laura
 #   ○  A subscriber for all office 877 meeting data:
 #   offices/877/meetings/#
-#   ○  Note + may appear multiple times, but # only once and must be last\
+#   ○  Note + may appear multiple times, but # only once and must be last.
 # Given a topic and topic pattern write a function returning true if they match and false if not.
 
 

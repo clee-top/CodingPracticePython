@@ -19,7 +19,7 @@ class ListNode:
         self.next = None
 
 
-def addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:
+def add_two_numbers(l1: ListNode, l2: ListNode) -> ListNode:
     # First let's get the numbers into an easy to parse string. Get a blank string and a pointer.
     first_num = ""
     first_pointer = l1
@@ -51,7 +51,7 @@ def addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:
 
     # Make the tail node of newly returned list. Our final number is already the reverse order of the final product
     # So we can just count from 0 - length-1
-    # Then construct the rest in a loop so we can get the order right.
+    # Then construct the rest in a loop, so we can get the order right.
     new_node = ListNode(int(final_num[0]))
     new_node.next = None
     previous_node = new_node
@@ -90,13 +90,13 @@ example_2_third_digit = ListNode(4)
 example_2_first_digit.next = example_2_second_digit
 example_2_second_digit.next = example_2_third_digit
 
-addTwoNumbers(example_1_first_digit, example_2_first_digit)
+add_two_numbers(example_1_first_digit, example_2_first_digit)
 
 example_3_first_digit = ListNode(0)
 
 example_4_first_digit = ListNode(0)
 
-addTwoNumbers(example_3_first_digit, example_4_first_digit)
+add_two_numbers(example_3_first_digit, example_4_first_digit)
 
 # print(example_1_first_digit.val)
 # print(example_1_first_digit.next.val)

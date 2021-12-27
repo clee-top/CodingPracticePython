@@ -21,8 +21,7 @@
 
 import re
 
-# This function takes some raw input files and outputs both a more formatted string as well
-# as grouping entries that have the same "ENV" and "APP_NAME" entry.
+# This function takes some raw input files and outputs both a more formatted string and a grouping of entries that have the same "ENV" and "APP_NAME" entry.
 def parse_log_file(input_string):
 
     # Keep a data structure that'll allow for counting.

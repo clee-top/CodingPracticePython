@@ -1,5 +1,5 @@
 # Aktana and Flexport both asked these exact questions. Wonder where they got it. Below is given prompt
-# Looked later, this is another a geeks for geeks problem (Sigh) https://www.geeksforgeeks.org/program-generate-possible-valid-ip-addresses-given-string/
+# Looked later, this is another a geeks for geeks problem - https://www.geeksforgeeks.org/program-generate-possible-valid-ip-addresses-given-string/
 
 # IPv4 Address Validator
 #
@@ -8,9 +8,9 @@
 # 256.256.256.256 -> false
 
 
-# This function takes an input and returns True if it is a valid. IPv4 Address, False if not.
+# This function takes an input and returns True if it is valid. IPv4 Address, False if not.
 def validate_ip(number_to_check):
-    # Split on the dots since IPv4 addresses have a required format we can which easily this way.
+    # Split on the dots since IPv4 addresses have a required format we easily use this way.
     numbers_split = number_to_check.split(".")
 
     # Check right # of inputs
@@ -54,7 +54,7 @@ def validate_ip(number_to_check):
 def ip_maker(input_number):
     input_length = len(input_number)
 
-    # Check string isn't too long. IPV4 can'th ave more then 12 numbers.
+    # Check string isn't too long. IPV4 can't have more than 12 numbers.
     if input_length > 12:
         return []
 
