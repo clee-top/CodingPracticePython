@@ -1,5 +1,7 @@
-Solution.
-# Note: words.txt is the example the company gave.
+## Solution
+
+Note: words.txt is the example the company gave.
+
 cat <target text file> | tr ' ' '\n' | sed '/^[[:space:]]*$/d' | sort | uniq -c | sed 's/^[ \t]*//;s/[ \t]*$//' | sort -n -r | awk '{print $2,$1}'
 
 Explanation (By command) -> 
