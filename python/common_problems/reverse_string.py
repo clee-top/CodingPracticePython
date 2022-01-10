@@ -7,8 +7,10 @@ def reverse_string(input_string):
     # Tricky -> Range goes to whole number BEFORE you stop. So to stop at 0 the second parameter needs to be -1 (The next -1 step from 0))
     for index in range(len(input_string) - 1, -1, -1):
         # print("Element is: " + str(index))
+        # Append to a new string to shove it in a variable.
         print(input_string[index])
 
     return new_string
+
 
 reverse_string("Meow")

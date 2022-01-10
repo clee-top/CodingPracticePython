@@ -1,8 +1,8 @@
-
 # Description from Triplebyte Proctor
 # Big log file, all the questions are stuff you want to know about them
 
 import re
+
 
 # This function parses the log file and returns how many of the requests gave a 404.
 def response_not_found():
@@ -12,7 +12,7 @@ def response_not_found():
 
     first_line = log_file.readline()
 
-    #print("The first line is: " + first_line)
+    # print("The first line is: " + first_line)
     # first_split = re.split(r'\w', first_line)
     # first_split = first_line.split()
     # print("The split of the first line on whitespace is: " + str(first_split))
@@ -27,6 +27,7 @@ def response_not_found():
 
     print("We found this many 404 codes: " + str(not_found_counter))
     return not_found_counter
+
 
 # Get the unique ips
 def unique_ips():
@@ -50,6 +51,7 @@ def unique_ips():
     print("We found this many unique ips: " + str(unique_count))
     return unique_count
 
+
 # Get all the bytes in responses.
 def size_response():
 
@@ -71,6 +73,7 @@ def size_response():
 
     print("Bytes on date responses: " + str(bytes_on_date))
     return bytes_on_date
+
 
 # Get top five resources accessed (Urls)
 def top_five():
@@ -94,7 +97,7 @@ def top_five():
 # size_response()
 # Get the top five responses.
 # top_five()
-# Find the busiest thirty minute window.
+# Find the busiest thirty-minute window.
 # thirty_minute_window()
 
 # Bonus  -> Scan the logs and see any security issues. I saw a bunch of logs trying to access admin page and reset passwords. That's bad.

@@ -20,7 +20,7 @@
 # Then when you evict you simply choose first one in the lowest tier.
 
 # N -> They told me this problem is some mini-piece of a program they wrote for caching jobs in a CI environment. Cool.
-class usage_map:
+class UsageMap:
     # Keep a global least used entry so when you set over the cache limit you can immediately eject the first entry with that total.
     least_used = None
 
@@ -71,7 +71,7 @@ class usage_map:
         return self.internal_dict
 
 
-some_new_map = usage_map(2)
+some_new_map = UsageMap(2)
 
 # print("The size var of my new class is: " + str(some_new_map.size))
 

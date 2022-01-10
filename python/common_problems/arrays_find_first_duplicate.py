@@ -54,9 +54,8 @@ def first_duplicate(a):
     # If you can't find any dupes, return -1.
     return -1
 
-# Test cases
 
-
+# Test cases Use assert next time.
 first_test_case = first_duplicate([2, 1, 3, 5, 3, 2])
 print("First test from example: [2, 1, 3, 5, 3, 2], expected output: 3 -> " + str(first_test_case))
 

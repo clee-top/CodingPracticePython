@@ -20,7 +20,7 @@
 # Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
 
 
-def lengthOfLongestSubstring(s: str) -> int:
+def length_of_longest_substring(s: str) -> int:
 
     # Get the length
     input_length = len(s)
@@ -35,10 +35,8 @@ def lengthOfLongestSubstring(s: str) -> int:
     max_start_index = 0
 
     # Hash Map to store last occurrence of each already visited character.
-    last_seen_map = {}
-
     # Pre-populate: The "first" last occurrence of first character is index 0
-    last_seen_map[s[0]] = 0
+    last_seen_map = {s[0]: 0}
 
     # Loop through the string.
     for index in range(1, input_length):
@@ -48,7 +46,8 @@ def lengthOfLongestSubstring(s: str) -> int:
             last_seen_map[s[index]] = index
 
         else:
-            # If this character is present in hash then this character has previous occurrence, check if that occurrence is before or after starting point of current substring.
+            # If this character is present in hash then this character has previous occurrence,
+            # check if that occurrence is before or after starting point of current substring.
             if last_seen_map[s[index]] >= current_sub_index:
 
                 # Find length of current substring and update substring max length and start accordingly.
@@ -74,6 +73,6 @@ def lengthOfLongestSubstring(s: str) -> int:
     return len(s[max_start_index: max_start_index + longest_substring])
 
 
-lengthOfLongestSubstring("abcabcbb")
-lengthOfLongestSubstring("bbbbb")
+length_of_longest_substring("abcabcbb")
+length_of_longest_substring("bbbbb")
 

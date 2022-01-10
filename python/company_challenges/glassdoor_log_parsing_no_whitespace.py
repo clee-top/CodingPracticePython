@@ -21,6 +21,7 @@
 
 import re
 
+
 # This function takes some raw input files and outputs both a more formatted string and a grouping of entries that have the same "ENV" and "APP_NAME" entry.
 def parse_log_file(input_string):
 
@@ -41,9 +42,8 @@ def parse_log_file(input_string):
             counts_dict[new_entry[0]+ " " + new_entry[1] + " " + new_entry[2]] = 1
 
     print(str(counts_dict))
-    #for entry in counts_dict:
-    #print(entry.split(" "))
-
+    # for entry in counts_dict:
+    # print(entry.split(" "))
 
 
 example_log = '''Prod-20160502-app-02.glassdoor.local

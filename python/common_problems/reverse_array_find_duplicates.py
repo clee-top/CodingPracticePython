@@ -55,4 +55,4 @@ def find_duplicates(input_array):
     return return_array
 
 
-find_duplicates([8, 1, 2, 3, 2, 4, 1, 1, 2])
+print(str(find_duplicates([8, 1, 2, 3, 2, 4, 1, 1, 2])))
