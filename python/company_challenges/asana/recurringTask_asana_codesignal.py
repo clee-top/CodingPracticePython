@@ -69,6 +69,8 @@
 def solution(firstDate, k, daysOfTheWeek, n):
     # First off we need to build a list of the dates we're passing back.
     dates_to_return = []
+    number_of_appointments = n
+    weeks_until_recurrence = k
 
     # That's easy, now we need to iterate. Let's do a loop and prime it with the first date.
     # We can get the ints of the first date by splitting the first date that was passed in.
@@ -81,34 +83,60 @@ def solution(firstDate, k, daysOfTheWeek, n):
     # Using this to keep track of the offset of the last day an appointment was scheduled on that day.
     days_of_week_map = {"Sunday": None, "Monday": None, "Tuesday": None, "Wednesday": None, "Thursday": None, "Friday": None, "Saturday": None}
 
-    # Loop until we have no more appointments left. This will also just not run if there's only one.
-    while n > 0:
+    # Go through one full week starting at current day.
+    for week_index in range(0, 7):
 
         # Initialize the current day of the week as a string.
         check_day_of_week_string = get_day_of_week_from_date_string(current_day, current_month, current_year)
 
         # If that day is in the "occurs on" array, then we need to schedule that appointment.
         if check_day_of_week_string in daysOfTheWeek:
-            days_counter = offset_days_from_start_of_year(current_day, current_month, current_year) - days_of_week_map[check_day_of_week_string]
+
             # Base case, we've never scheduled anything on this day yet. So we can presume if we're seeing it we can make an appointment.
             if days_of_week_map[check_day_of_week_string] is None:
+
                 # Set a counter in here to save the date we last scheduled an appointment on this day. We need to check if it's been X * weeks it occurs
                 # when it is not none to see if we need to schedule on that day.
                 days_of_week_map[check_day_of_week_string] = offset_days_from_start_of_year(current_day, current_month, current_year)
+
                 # Append this date!
                 dates_to_return.append("{:02d}/{:02d}/{:02d}".format(current_day, current_month, current_year))
-                n -= 1
+                number_of_appointments -= 1
+
             elif offset_days_from_start_of_year(current_day, current_month, current_year) - days_of_week_map[check_day_of_week_string] >= (k * 7):
+
                 # Another base case. We encountered a day, and it's been more than x weeks. Add it. Move on.
                 days_of_week_map[check_day_of_week_string] = offset_days_from_start_of_year(current_day, current_month, current_year)
+
                 # Append this date!
                 dates_to_return.append("{:02d}/{:02d}/{:02d}".format(current_day, current_month, current_year))
-                n -= 1
+                number_of_appointments -= 1
 
-        # Brute force, check one day at a time.
+        # Brute force, check one day at a time.meowmeow
+
         current_day, current_month, current_year = add_days_to_a_date(current_day, current_month, current_year, 1)
 
-    # print("Current appointment list if: {}".format(dates_to_return))
+    # Go through days of week. Mark the nones and delete them.
+    new_recurrence_list = []
+    for key in days_of_week_map:
+        if days_of_week_map[key] is None:
+            delete_list.append(key)
+
+    for delete_target in delete_list:
+        del days_of_week_map[delete_target]
+
+    print("Offset of the last day checked is: {} ".format(offset_days_from_start_of_year(current_day, current_month, current_year)))
+    print("Days of the week map looks like this {}".format(days_of_week_map))
+
+
+
+    # Loop through other weeks now that we have a map we can use.
+    # while n > 0:
+
+
+
+
+    print("Current appointment list if: {}".format(dates_to_return))
     return dates_to_return
 
 
@@ -238,3 +266,7 @@ def get_day_of_week_from_date_integer(day, month, year):
     year -= month < 3
     index = ((year + int(year / 4) - int(year / 100) + int(year / 400) + t[month - 1] + day) % 7)
     return index
+
+
+# For firstDate = "01/01/2015" , k = 2, daysOfTheWeek = ["Monday", "Thursday"], n = 4
+print(solution("01/01/2015", 2, ["Monday", "Thursday"], 4))
