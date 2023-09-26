@@ -24,5 +24,4 @@ for line in file_text:
 # Without the "with" magic above you'd want to f.close here.
 new_file.close()
 
-
 print(important)
